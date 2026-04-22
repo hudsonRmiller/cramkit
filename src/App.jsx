@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const PRICE = 3.99;
 
@@ -426,6 +427,7 @@ export default function App() {
           <div className="canceled-wrap"><h2>Payment canceled</h2><p>No worries — nothing was charged.</p><button className="preview-btn" style={{maxWidth:300,margin:"0 auto"}} onClick={goHome}>Go back</button></div>
         )}
       </div>
+      <Analytics />
     </>
   );
 }
